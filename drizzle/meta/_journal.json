@@ -8,6 +8,13 @@
       "when": 1771645781823,
       "tag": "0000_spooky_shinobi_shaw",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1771776030281,
+      "tag": "0001_complex_killer_shrike",
+      "breakpoints": true
     }
   ]
 }
