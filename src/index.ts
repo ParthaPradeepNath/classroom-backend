@@ -9,14 +9,17 @@ if (!process.env.FRONTEND_URL) {
   throw new Error("FRONTEND_URL is not set in the .env file");
 }
 
-app.use(cors({
-  origin: process.env.FRONTEND_URL,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}))
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
-app.use('/api/subjects', subjectsRouter)
+app.use("/api/subjects", subjectsRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
