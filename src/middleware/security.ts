@@ -53,7 +53,7 @@ const securiyMiddleware = async (req: Request, resolve: Response, next: NextFunc
         }
 
         if (decision.isDenied() && decision.reason.isRateLimit()) {
-            return resolve.status(403).json({ error: 'Too many requests.', message });
+            return resolve.status(429).json({ error: 'Too many requests.', message });
         }
 
         next();
